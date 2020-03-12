@@ -1,0 +1,35 @@
+image: continuumio/anaconda3:2019.03
+stages:
+  - check-files
+  - lint
+  - run
+
+check-lab2-files:
+  tags:
+    - docker
+  stage: check-files
+  script:
+    - test -f .gitignore
+    - test -f .pylintrc
+    - test -f common/test_env.py
+    - test -f lab2.py
+    - find . -name "*" -not -path "./.git/*" -not -path "./builds/*" 2>&1
+
+lint-lab2:
+  tags:
+    - docker
+  stage: lint
+  script:
+    # Check formatting
+    - conda install -c conda-forge autopep8
+    - autopep8 -d --exit-code lab2.py
+    # Lint
+    - pylint lab2.py
+
+run-lab2:
+  tags:
+    - docker
+  stage: run
+  script:
+    - chmod +x lab2.py
+    - ./lab2.py

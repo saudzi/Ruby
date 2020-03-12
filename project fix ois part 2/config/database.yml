@@ -1,0 +1,8 @@
+# Note that memory sqlite is used for Active records classes unit tests
+unit_test:
+  adapter: 'sqlite3'
+  database: ':memory:'
+
+development:
+  adapter: 'sqlite3'
+  database: 'db/fix_ois_example.sqlite3'

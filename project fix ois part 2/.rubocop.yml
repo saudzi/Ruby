@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - data/**/*
+    - db/*
+    - vendor/**/*
+    - Rakefile
+    - '**/tempCodeRunnerFile.rb'
+    - Gemfile
+
+Layout/EndOfLine:
+  EnforcedStyle: lf

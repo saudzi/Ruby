@@ -1,0 +1,17 @@
+stages:
+- lint
+- test
+
+lint:
+  tags: 
+    - ics0013-2019
+  stage: lint
+  script:
+    - rake rubocop
+    
+test-lab:
+  tags: 
+    - ics0013-2019
+  stage: test
+  script:
+    - rake test

@@ -1,0 +1,69 @@
+GIT
+  remote: https://github.com/larskanis/sqlite3-ruby
+  revision: 1027509079176fcc4088dcc7638101cde617cf16
+  branch: add-gemspec
+  specs:
+    sqlite3 (1.3.13.20180326210955)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (5.2.3)
+      activesupport (= 5.2.3)
+    activerecord (5.2.3)
+      activemodel (= 5.2.3)
+      activesupport (= 5.2.3)
+      arel (>= 9.0)
+    activesupport (5.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (9.0.0)
+    ast (2.4.0)
+    concurrent-ruby (1.1.5)
+    debase (0.2.2)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.4)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.2)
+    minitest (5.11.3)
+    parallel (1.16.0)
+    parser (2.6.2.0)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    rainbow (3.0.0)
+    rake (12.3.2)
+    rdoc (6.1.1)
+    rubocop (0.63.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.4.0)
+    ruby-debug-ide (0.6.1)
+      rake (>= 0.8.1)
+    ruby-progressbar (1.10.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    unicode-display_width (1.4.1)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  activerecord (~> 5.2.2)
+  debase
+  minitest (~> 5.11.3)
+  rake (~> 12.3.2)
+  rdoc
+  rubocop (~> 0.63.1)
+  ruby-debug-ide
+  sqlite3 (~> 1.3.6)!
+
+BUNDLED WITH
+   1.17.2

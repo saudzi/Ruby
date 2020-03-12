@@ -1,0 +1,83 @@
+## Data frame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1842 entries, 0 to 1841
+Data columns (total 15 columns):
+Faculty                                    1842 non-null object
+Paid tuition                               1842 non-null object
+Study load                                 1842 non-null object
+Previous school level                      1842 non-null object
+Previous school study language             1842 non-null object
+Recognition                                250 non-null object
+Estonian language exam points              1064 non-null float64
+Estonian as second language exam points    435 non-null float64
+Mother tongue exam points                  12 non-null float64
+Narrow mathematics exam points             132 non-null float64
+Wide mathematics exam points               1102 non-null float64
+Mathematics exam points                    214 non-null float64
+Study language                             1842 non-null object
+Foreign student                            1842 non-null object
+In university after 4 semesters            1842 non-null object
+dtypes: float64(6), object(9)
+memory usage: 151.1+ KB
+None
+
+
+## Data frame shape:
+1842 rows
+15 columns
+
+
+## Data frame columns:
+Faculty
+Paid tuition
+Study load
+Previous school level
+Previous school study language
+Recognition
+Estonian language exam points
+Estonian as second language exam points
+Mother tongue exam points
+Narrow mathematics exam points
+Wide mathematics exam points
+Mathematics exam points
+Study language
+Foreign student
+In university after 4 semesters
+
+
+## Data head and tail:
+                              Faculty Paid tuition Study load              Previous school level Previous school study language Recognition  Estonian language exam points  Estonian as second language exam points  Mother tongue exam points  Narrow mathematics exam points  Wide mathematics exam points  Mathematics exam points Study language Foreign student In university after 4 semesters
+0  School of Information Technologies  Yes          Full       General secondary education (310)  English                        NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       English        Yes             Yes                           
+1  School of Information Technologies  Yes          Full       General secondary education (310)  Estonian                       NaN         63.0                          NaN                                      NaN                        NaN                              67.0                         NaN                       Estonian       No              No                            
+2  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN         97.0                          NaN                                      NaN                        NaN                              90.0                         NaN                       Estonian       No              No                            
+3  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN        NaN                             67.0                                    NaN                        NaN                              67.0                         NaN                       Estonian       No              Yes                           
+4  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN         58.0                          NaN                                      NaN                        NaN                              59.0                         NaN                       Estonian       No              No                            
+5  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN        NaN                             66.0                                    NaN                        NaN                              68.0                         NaN                       Estonian       No              No                            
+6  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN         86.0                          NaN                                      NaN                        NaN                              56.0                         NaN                       Estonian       No              No                            
+7  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN         58.0                          NaN                                      NaN                        NaN                              58.0                         NaN                       Estonian       No              Yes                           
+8  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN         65.0                          NaN                                      NaN                        NaN                             NaN                            58.0                     Estonian       No              No                            
+9  School of Information Technologies  No           Full       General secondary education (310)  Estonian                       NaN        NaN                             89.0                                    NaN                        NaN                              80.0                         NaN                       Estonian       No              Yes                           
+...
+                        Faculty Paid tuition Study load                                          Previous school level Previous school study language Recognition  Estonian language exam points  Estonian as second language exam points  Mother tongue exam points  Narrow mathematics exam points  Wide mathematics exam points  Mathematics exam points Study language Foreign student In university after 4 semesters
+1837  Estonian Maritime Academy  No           Full       General secondary education (310)                              Estonian                       NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       Estonian       No              Yes                           
+1838  Estonian Maritime Academy  No           Full       General secondary education (310)                              Immersion in Estonian          NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       Estonian       No              No                            
+1839  Estonian Maritime Academy  No           Full       General secondary education (310)                              Not known                      NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       Estonian       No              Yes                           
+1840  Estonian Maritime Academy  No           Full       Vocational secondary education based on basic education (323)  Not known                      NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       Estonian       No              Yes                           
+1841  Estonian Maritime Academy  No           Full       General secondary education (310)                              Estonian                       NaN        NaN                            NaN                                      NaN                        NaN                             NaN                           NaN                       Estonian       No              Yes                           
+
+
+## Numeric values statistics:
+                      Faculty Paid tuition Study load              Previous school level Previous school study language   Recognition  Estonian language exam points  Estonian as second language exam points  Mother tongue exam points  Narrow mathematics exam points  Wide mathematics exam points  Mathematics exam points Study language Foreign student In university after 4 semesters
+count   1842                   1842         1842       1842                               1842                           250          1064.000000                    435.000000                               12.000000                  132.000000                      1102.000000                   214.000000                1842           1842            1842                          
+unique  5                      2            2          8                                  5                              3            nan                            nan                                      nan                        nan                             nan                           nan                       3              2               2                             
+top     School of Engineering  No           Full       General secondary education (310)  Estonian                       Silver medal nan                            nan                                      nan                        nan                             nan                           nan                       Estonian       No              Yes                           
+freq    711                    1720         1826       1710                               1540                           127          nan                            nan                                      nan                        nan                             nan                           nan                       1689           1817            1149                          
+mean    NaN                    NaN          NaN        NaN                                NaN                            NaN          70.373120                      74.457471                                67.916667                  66.931818                       68.813067                     66.584112                 NaN            NaN             NaN                           
+std     NaN                    NaN          NaN        NaN                                NaN                            NaN          13.414054                      22.703253                                18.272972                  22.042704                       17.512873                     19.930158                 NaN            NaN             NaN                           
+min     NaN                    NaN          NaN        NaN                                NaN                            NaN          20.000000                      10.000000                                30.000000                  2.000000                        2.000000                      5.000000                  NaN            NaN             NaN                           
+25%     NaN                    NaN          NaN        NaN                                NaN                            NaN          61.000000                      65.000000                                58.750000                  55.750000                       57.000000                     55.000000                 NaN            NaN             NaN                           
+50%     NaN                    NaN          NaN        NaN                                NaN                            NaN          71.000000                      83.000000                                70.000000                  72.000000                       70.000000                     68.000000                 NaN            NaN             NaN                           
+75%     NaN                    NaN          NaN        NaN                                NaN                            NaN          80.000000                      92.000000                                77.500000                  83.250000                       82.000000                     82.750000                 NaN            NaN             NaN                           
+max     NaN                    NaN          NaN        NaN                                NaN                            NaN          100.000000                     100.000000                               100.000000                 99.000000                       100.000000                    100.000000                NaN            NaN             NaN                           
+
+

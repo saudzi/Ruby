@@ -1,0 +1,71 @@
+# frozen_string_literal: true
+
+require 'rake/testtask'
+require 'rubocop/rake_task'
+require 'active_record'
+require 'rdoc/task'
+
+desc 'Run rubocop and test tasks'
+task :allTests do
+  Rake::Task[:rubocop].invoke
+  Rake::Task[:test].invoke
+end
+
+desc 'Run rubocop'
+task :rubocop do
+  RuboCop::RakeTask.new
+end
+
+desc 'Run tests'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.libs << 'lib/courses'
+  t.libs << 'lib/students'
+  t.libs << 'config'
+  t.libs << 'db'
+  t.test_files = FileList['test/**/test_*.rb']
+end
+
+require 'rdoc/task'
+
+desc 'Generate documentation'
+RDoc::Task.new do |rdoc|
+  rdoc.main = 'README.markdown'
+  rdoc.rdoc_files.include('README.markdown', 'lib/**/*.rb')
+  rdoc.rdoc_dir = 'doc'
+end
+
+# See for examples
+# https://github.com/rails/rails/blob/master/activerecord/lib/active_record/railties/databases.rake
+namespace :db do
+  config_file = 'config/database.yml'
+  db_env = 'development'
+  schema_file = './db/schema.rb'
+  dump_file = 'db/schema_dump.rb'
+
+  desc 'Create database and schema'
+  task :create do
+    open_db(config_file, db_env)
+    puts "Creating database from schema #{schema_file}"
+    require schema_file
+  end
+
+  desc 'Dump database schema'
+  task :dumpSchema do
+    require 'active_record/schema_dumper'
+    open_db
+    puts "Dumping database schema to #{dump_file}"
+    File.open(dump_file, 'w:utf-8') do |file|
+      ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+    end
+  end
+
+  def open_db(config_file, db_env)
+    puts "Using database configuration #{config_file} environment #{db_env}"
+    db_config = YAML.safe_load(File.open(config_file))
+    ActiveRecord::Base.establish_connection(db_config[db_env])
+  end
+end
+
+task default: :allTests

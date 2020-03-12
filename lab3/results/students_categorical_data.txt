@@ -1,0 +1,51 @@
+Non-numeric(categorical) columns values and counts:
+Faculty
+Estonian Maritime Academy             242
+School of Business and Governance     309
+School of Engineering                 711
+School of Information Technologies    486
+School of Science                     94  
+
+Paid tuition
+No     1720
+Yes    122  
+
+Study load
+Full       1826
+Partial    16   
+
+Previous school level
+Basic secondary / technical education requiring basic education (314)                              3   
+First level vocational education and training (secondary vocational education) at level 4 (441)    4   
+First level vocational training at level 4 (442)                                                   1   
+General secondary education (310)                                                                  1710
+Vocational and secondary education that requires basic education (313)                             2   
+Vocational secondary education (411)                                                               102 
+Vocational secondary education based on basic education (323)                                      19  
+Vocational training based on basic education (410)                                                 1    
+
+Previous school study language
+English                  2   
+Estonian                 1540
+Immersion in Estonian    14  
+Not known                119 
+Russian                  167  
+
+Recognition
+Cum laude       1  
+Gold medal      122
+Silver medal    127 
+
+Study language
+English     91  
+Estonian    1689
+Russian     62   
+
+Foreign student
+No     1817
+Yes    25   
+
+In university after 4 semesters
+No     693 
+Yes    1149 
+

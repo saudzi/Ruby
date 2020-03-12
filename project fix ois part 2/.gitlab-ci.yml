@@ -1,0 +1,36 @@
+before_script:
+# Note that before script is run before every job
+- bundler install --path vendor/bundle
+
+stages:
+- lint
+- test
+- run
+
+lint:
+  tags: 
+    - ics0013-2019
+  stage: lint
+  script:
+    - bundle exec rake rubocop
+    
+test-lab:
+  tags: 
+    - ics0013-2019
+  stage: test
+  script:
+    - bundle exec rake test
+
+run-lab:
+  tags:
+    - ics0013-2019
+  stage: run
+  script:
+    - bundle exec rake db:create
+    - bundle exec bin/fix_ois -h
+    # 2X is intentional
+    - bundle exec bin/fix_ois --db-config config/database.yml --import-students data/students.csv --import-courses data/courses.csv
+    - bundle exec bin/fix_ois --db-config config/database.yml --import-students data/students.csv --import-courses data/courses.csv
+    - bundle exec bin/fix_ois --db-config config/database.yml --db-enviroment development --print-students Y --print-courses Y
+    - bundle exec bin/fix_ois --db-config config/database.yml --db-enviroment development --enrol Y --course 7 --student "Lin Goo"
+    - bundle exec bin/fix_ois --db-config config/database.yml --db-enviroment development --course 7 --student "Lin Goo" --grade 5 29.02.2020

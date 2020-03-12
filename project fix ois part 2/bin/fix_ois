@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Fix_ois!
+root = File.dirname __dir__
+$:.push *Dir[root + '/lib']
+$:.push *Dir[root + '/lib/*/']
+$:.push *Dir[root + '/vendor/*/**/']
+load 'fix_ois.rb'
